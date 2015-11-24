@@ -111,7 +111,7 @@ void set_ssb_offset()        // set ssb offset '9' key
 void get_freq()      // get freq cmd from kpd '0' key
 {
   long kpdEntry = millis();    //time of entering this fn
-  while(Kpd.Key_State() == 1)    // key remains pressed > 2 sec
+  while(Kpd.Key_State() == 3)    // key remains pressed > 2 sec
   { 
     if(millis() > kpdEntry + 2000);
     store_freq();
